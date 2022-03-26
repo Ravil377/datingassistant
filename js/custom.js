@@ -321,7 +321,7 @@
 
     const openModal = () => {
       const bodyItems = body.children;
-      modalContainer.append(bodyItems[4]);
+      modalContainer.append(bodyItems[2]);
       modal.classList.add("modal_opened");
     };
 
