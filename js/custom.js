@@ -324,9 +324,8 @@
 
   const openModal = () => {
     const bodyItems = body.children;
+    modalContainer.append(bodyItems[2]);
     modal.classList.add('modal_opened');
-    console.log(bodyItems);
-    modalContainer.append(bodyItems[4]);
   };
 
   const checkLastGirl = () => countGirl < maxCountGirl - 1;
