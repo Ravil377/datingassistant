@@ -16,7 +16,6 @@
   const modalContainer = modal.querySelector('.modal__container-js');
   const modalContainerGirls = document.querySelector('.modal__select-container-js');
   main.querySelector('.footer-js');
-  const bodyItems = body.children;
   let countGirl = 0;
   const maxCountGirl = 12;
   unlockBtn.addEventListener('click', () => {
@@ -294,8 +293,7 @@
     const girlBg = document.querySelector('.girl-js');
     const girlTitle = document.querySelector('.girl__title-js');
     const distance = document.querySelector('.girl__distance-js');
-    document.querySelector('.girl__content'); // container.dataset.id = girlsRandom[num].id;
-
+    document.querySelector('.girl__content');
     girlBg.src = girlsRandom[num].bg;
     girlTitle.textContent = girlsRandom[num].info;
     distance.textContent = girlsRandom[num].millies;
@@ -325,7 +323,9 @@
   // });
 
   const openModal = () => {
+    const bodyItems = body.children;
     modal.classList.add('modal_opened');
+    console.log(bodyItems);
     modalContainer.append(bodyItems[4]);
   };
 
@@ -376,224 +376,6 @@
     modalContainerBtn.classList.add('modal__btn-container_result');
     const formbtn = modal.querySelector('[data-id="register"]');
     formbtn.textContent = 'start chating';
-  }); // const closeModal = () => {
-  //     modal.classList.remove('modal_opened');
-  //     setTimeout(()=> {
-  //         modal.classList.remove('modal_form-active');
-  //     }, 500);
-  // }
-  // const checkKeyPress = (e) => {
-  //     if (e.code === "Escape") {
-  //         closeModal();
-  //     }
-  // };
-  // const checkPressOverlay = (e) => {
-  //     if (e.target === modal) {
-  //       closeModal();
-  //     }
-  // };
-  // const openForm = () => {
-  //     modal.classList.add('modal_form-active');
-  // }
-  // yes.addEventListener("click", openForm)
-  // no.addEventListener("click", closeModal);
-  // modal.addEventListener("click", e => checkPressOverlay(e));
-  // closeModalBtn.addEventListener('click', closeModal);
-  // document.addEventListener("keydown", checkKeyPress);
-  // profileBtnBack.addEventListener('click', () => {
-  //     profile.classList.remove('profile_active');
-  //     setTimeout(()=> {
-  //         catalogContainer.classList.remove('catalog__main-container_hidden');    
-  //         profileLogo.classList.remove('catalog__logo_hidden');
-  //         document.querySelector('.profile__gallery-js').innerHTML = '';
-  //     }, 200);
-  // });
-  // function tgtrimm(str){var ars = str.replace(/[^a-zA-ZА-Яа-яЁё]/gi,'').replace(/\s+/gi,', '); return ars;}
-  // profileNavBtn.addEventListener('click', (e) => {
-  //     const nav = e.target.classList.contains('profile__nav');
-  //     const name = tgtrimm(e.target.closest('.profile').querySelector('.profile__info-name-js').textContent);
-  //     const popupGirlName = modal.querySelector('.modal__invite-name-js');
-  //     popupGirlName.textContent = name;
-  //     const classes = e.target.closest('.profile__btn');
-  //     const activeAnim = document.querySelector('.modal__anim_active');
-  //     activeAnim && activeAnim.classList.remove('modal__anim_active');
-  //     if(classes.classList.contains('profile__btn-wine-js')) {
-  //         document.querySelector('.modal__anim-wine').classList.add('modal__anim_active');
-  //     }
-  //     if(classes.classList.contains('profile__btn-coffee-js')) {
-  //         document.querySelector('.modal__anim-cup').classList.add('modal__anim_active');
-  //     }
-  //     if(classes.classList.contains('profile__btn-film-js')) {
-  //         document.querySelector('.modal__anim-film').classList.add('modal__anim_active');
-  //     }
-  //     if(classes.classList.contains('profile__btn-flower-js')) {
-  //         document.querySelector('.modal__anim-flower').classList.add('modal__anim_active');
-  //     }
-  //     if(classes.classList.contains('profile__btn-pizza-js')) {
-  //         document.querySelector('.modal__anim-pizza').classList.add('modal__anim_active');
-  //     }
-  //     if(classes.classList.contains('profile__btn-dinner-js')) {
-  //         document.querySelector('.modal__anim-dinner').classList.add('modal__anim_active');
-  //     }
-  //     if(classes.classList.contains('profile__btn-star-js')) {
-  //         document.querySelector('.modal__anim-star').classList.add('modal__anim_active');
-  //     }
-  //     if(!nav) {
-  //         openModal(e);
-  //     }
-  // });
-  // buttonUnlock.addEventListener('click', () => {
-  //     document.querySelector('.main').classList.add('main_hidden');
-  // });
-  // const containerGirl = document.querySelector('.catalog__list-js')
-  // containerGirl.addEventListener('click', (e) => {
-  //     const girlId = e.target.closest('.catalog__item-js').dataset.id;
-  //     catalogContainer.classList.add('catalog__main-container_hidden');
-  //     profileLogo.classList.add('catalog__logo_hidden');
-  //     const header = document.querySelector('.profile__header-js');
-  //     const avatar = document.querySelector('.profile__avatar-js');
-  //     const distance = document.querySelector('.profile__info-distance-js');
-  //     const name = document.querySelector('.profile__info-name-js');
-  //     const photosContainer = document.querySelector('.profile__gallery-js');
-  //     const girl = girls.find(g => {
-  //         if(g.id == girlId) return g;
-  //     })
-  //     name.textContent = girl.info || '';
-  //     distance.textContent = girl.millies || '';
-  //     header.src = girl.header || '';
-  //     header.alt = girl.info || '';
-  //     avatar.src = girl.avatar || '';
-  //     avatar.alt = girl.info || '';
-  //     if(girl.photo.length === 6) {
-  //         photosContainer.classList.add('profile__gallery_template1');
-  //         photosContainer.classList.remove('profile__gallery_template2');
-  //         photosContainer.classList.remove('profile__gallery_template3');
-  //         photosContainer.classList.remove('profile__gallery_template4');
-  //         photosContainer.classList.remove('profile__gallery_template5');
-  //         photosContainer.classList.remove('profile__gallery_template6');
-  //     }
-  //     if(girl.photo.length === 8) {
-  //         photosContainer.classList.add('profile__gallery_template2');
-  //         photosContainer.classList.remove('profile__gallery_template1');
-  //         photosContainer.classList.remove('profile__gallery_template3');
-  //         photosContainer.classList.remove('profile__gallery_template4');
-  //         photosContainer.classList.remove('profile__gallery_template5');
-  //         photosContainer.classList.remove('profile__gallery_template6');
-  //     }
-  //     if(girl.photo.length === 4) {
-  //         photosContainer.classList.add('profile__gallery_template3');
-  //         photosContainer.classList.remove('profile__gallery_template1');
-  //         photosContainer.classList.remove('profile__gallery_template2');
-  //         photosContainer.classList.remove('profile__gallery_template4');
-  //         photosContainer.classList.remove('profile__gallery_template5');
-  //         photosContainer.classList.remove('profile__gallery_template6');
-  //     }
-  //     if(girl.photo.length === 5) {
-  //         photosContainer.classList.add('profile__gallery_template4');
-  //         photosContainer.classList.remove('profile__gallery_template3');
-  //         photosContainer.classList.remove('profile__gallery_template1');
-  //         photosContainer.classList.remove('profile__gallery_template2');
-  //         photosContainer.classList.remove('profile__gallery_template5');
-  //         photosContainer.classList.remove('profile__gallery_template6');
-  //     }
-  //     if(girl.photo.length === 3) {
-  //         photosContainer.classList.add('profile__gallery_template5');
-  //         photosContainer.classList.remove('profile__gallery_template3');
-  //         photosContainer.classList.remove('profile__gallery_template1');
-  //         photosContainer.classList.remove('profile__gallery_template2');
-  //         photosContainer.classList.remove('profile__gallery_template4');
-  //         photosContainer.classList.remove('profile__gallery_template6');
-  //     }
-  //     if(girl.photo.length === 7) {
-  //         photosContainer.classList.add('profile__gallery_template6');
-  //         photosContainer.classList.remove('profile__gallery_template3');
-  //         photosContainer.classList.remove('profile__gallery_template1');
-  //         photosContainer.classList.remove('profile__gallery_template2');
-  //         photosContainer.classList.remove('profile__gallery_template4');
-  //         photosContainer.classList.remove('profile__gallery_template5');
-  //     }
-  //     girl.photo.forEach(photo => {
-  //         let img = document.createElement('img');
-  //         img.src = photo;
-  //         img.alt = girl.info;
-  //         photosContainer.append(img);
-  //     })
-  //     setTimeout(()=>profile.classList.add('profile_active'),500);
-  //     document.querySelector('.profile__header').scrollIntoView({
-  //         behavior: 'smooth',
-  //         block: 'start'
-  //     });
-  // })
-  // girlsRandom.forEach((girl, idx) => {
-  //     if(idx > 11) return;
-  //     const photosPreview = girl.preview;
-  //     let girlTemplate = document.querySelector('#girl');
-  //     let element = girlTemplate.content.cloneNode(true);
-  //     element.querySelector('.catalog__item-js').dataset.id = girl.id;
-  //     element.querySelector('.catalog__girl-info-js').textContent = girl.info;
-  //     element.querySelector('.catalog__image-container-js').classList.add(girl.preview.length === 3 ? 'catalog__image-container_three' : 'catalog__image-container_four');
-  //     let count;
-  //     switch(girl.photo.length) {
-  //         case 3: 
-  //             count = 3;
-  //             break;
-  //         case 4:
-  //             count = 4;
-  //             break;
-  //         case 5:
-  //             count = 5;
-  //             break;
-  //         case 6:
-  //             count = 6;
-  //             break;
-  //         case 7:
-  //             count = 7;    
-  //             break;
-  //         case 8:
-  //             count = 8;
-  //             break;
-  //         default:
-  //             break;        
-  //     }
-  //     element.querySelector('.catalog__image-container-js').classList.add(girl.preview.length === 3 ? `catalog__image-container_three-count-${count}` : `catalog__image-container_four-count-${count}`);
-  //     // element.querySelector('.catalog__image-container-js').classList.add(girl.preview.length === 3 ? 'catalog__image-container_three' : 'catalog__image-container_four');
-  //     photosPreview.forEach((photo, idx) => {
-  //         let div = document.createElement('div');
-  //         div.classList.add('catalog__image');
-  //         let image = document.createElement('img');
-  //         image.src = photo;
-  //         image.alt = girl.info;
-  //         div.append(image);
-  //         element.querySelector('.catalog__image-container-js').append(div);
-  //     })
-  //     containerGirl.append(element);
-  // })
-  // const catalog = document.querySelector('.catalog');
-  // let formActive = false;
-  // const option = {
-  // 	root: document.querySelector( '#viewport' ),
-  // 	rootMargin: '0px',
-  // 	threshold: [ 0, 0.5 ]
-  // };
-  // const observer = new IntersectionObserver((entries, observer) => {
-  //     if(document.querySelector('.main_hidden') && !formActive) {
-  //         let isCatalog = catalogContainer.classList.contains('catalog__main-container_hidden');
-  //         formActive = true;
-  //         catalog.querySelector('.catalog__loader').classList.add('catalog__loader_active');
-  //         setTimeout(() => {
-  //             catalog.querySelector('.catalog__loader').classList.remove('catalog__loader_active');
-  //             setTimeout(() => {
-  //                 catalog.querySelector('.catalog__form').style.display = 'flex';
-  //                 setTimeout(() => {
-  //                     catalog.querySelector('.catalog__form').classList.add('catalog__form_active');
-  //                     document.querySelector('[data-id="register"]').scrollIntoView({
-  //                         behavior: 'smooth',
-  //                         block: 'start'
-  //                     });
-  //                 }, 1000);
-  //             }, 1000);
-  //         }, 4000);
-  //     }
-  // }, option);
+  });
 
 }));
