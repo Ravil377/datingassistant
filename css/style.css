@@ -74,6 +74,7 @@ body {
         flex-direction: column;
     overflow-x: hidden;
     width: 100vw;
+    height: var(--app-height);
     margin: 0;
     font-family: Outfit;
     font-style: normal;
@@ -414,7 +415,7 @@ template {
     background: url("../img/content/bg.jpg");
     background-size: cover;
     width: 100%;
-    height: var(--app-height);
+    height: 100%;
     box-sizing: border-box;
     z-index: 3;
     background-repeat: no-repeat;
@@ -532,13 +533,20 @@ template {
     }
 }
 
+.girl__img-container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
 .gallery {
     display: none;
     position: relative;
     background: #ffffff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     width: 100%;
-    height: var(--app-height);
+    height: 100%;
 }
 
 .gallery::after {
@@ -552,7 +560,10 @@ template {
 }
 
 .girl {
+    position: absolute;
+    top: 0;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
