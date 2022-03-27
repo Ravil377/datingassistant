@@ -304,13 +304,13 @@
     let img = document.createElement('img');
     img.src = girlsRandom[num].bg;
     girlBg.src = 'img/content/spin.gif';
-    girlBg.style = 'object-fit: contain;';
+    girlBg.style = 'object-fit: none;';
     girlTitle.textContent = girlsRandom[num].info;
     distance.textContent = girlsRandom[num].millies;
 
     img.onload = function () {
-      girlBg.src = img.src;
       girlBg.style = 'object-fit: cover;';
+      girlBg.src = img.src;
     };
   };
 
