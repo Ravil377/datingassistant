@@ -301,9 +301,17 @@
     const girlBg = document.querySelector(".girl-js");
     const girlTitle = document.querySelector(".girl__title-js");
     const distance = document.querySelector(".girl__distance-js");
-    girlBg.src = girlsRandom[num].bg;
+    let img = document.createElement('img');
+    img.src = girlsRandom[num].bg;
+    girlBg.src = 'img/content/spin.gif';
+    girlBg.style = 'object-fit: contain;';
     girlTitle.textContent = girlsRandom[num].info;
     distance.textContent = girlsRandom[num].millies;
+
+    img.onload = function () {
+      girlBg.src = img.src;
+      girlBg.style = 'object-fit: cover;';
+    };
   };
 
   const selectUpdate = () => {
