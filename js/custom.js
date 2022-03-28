@@ -16,6 +16,8 @@
   const modalContainer = modal.querySelector(".modal__container-js");
   const modalContainerGirls = document.querySelector(".modal__select-container-js");
   main.querySelector(".footer-js");
+  let img = document.createElement('img');
+  img.src = 'img/content/spin.gif';
   let countGirl = 0;
   const maxCountGirl = 12;
   unlockBtn.addEventListener("click", () => {
