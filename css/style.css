@@ -709,8 +709,6 @@ template {
     background: #1a0312;
     width: 100%;
     padding: 32px 0 28px 0;
-    -ms-transform: translateY(-1px);
-        transform: translateY(-1px);
 }
 
 .footer ul {
