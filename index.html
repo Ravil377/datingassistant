@@ -47,7 +47,7 @@
                 <div class="girl__online">Online</div>
                 <div class="girl__distance"><span class="girl__distance-js"></span> millies away</div>
             </div>
-            <div class="girl__buttons-container"> <button class="btn btn_gray" data-id="slap" type="button">Slap</button><button class="btn btn_purple" data-id="kiss" type="button">Kiss</button></div>
+            <div class="girl__buttons-container"> <button class="btn btn_gray" data-id="slap" type="button">Spank</button><button class="btn btn_purple" data-id="kiss" type="button">Kiss</button></div>
         </div>
     </div>
     <div class="footer footer-js">
@@ -78,6 +78,13 @@
     <div class="modal modal-js">
         <div class="modal__container modal__container-js">
             <div class="modal__btn-container modal__btn-container-js"><button class="btn btn_purple modal__btn" data-id="more" type="button">view more</button><button class="btn btn_transparent modal__btn" data-id="result" type="button">Show me results</button></div>
+            <div class="loading">
+                <div class="loading__overlay"><svg class="loading__overlay-img">
+                        <use xlink:href="img/symbols.svg#loading"></use>
+                    </svg>
+                    <div class="loading__text">Loading ...</div>
+                </div>
+            </div>
             <div class="modal__select-container">
                 <h2>This girls wants to chat with you </h2>
                 <ul class="modal__select-container-js"></ul>
@@ -89,6 +96,7 @@
                     <div class="form__placeholder-container"><input type="password" placeholder=" " required="required" /><label>Create password</label></div><button class="btn btn_purple modal__btn" data-id="register" type="submit">view more profiles</button>
                 </form>
             </div>
+            <div class="modal__scroll"> </div>
         </div>
     </div><script src="js/custom.js"></script>
 </body>
