@@ -355,16 +355,17 @@
         btn.classList.add('hvr-ripple-out-push_gray');
       }
 
-      countGirl++;
-      girlUpdate(countGirl);
       setTimeout(function () {
         if (id === 'kiss') {
-          btn.classList.remove('hvr-ripple-out-push');
           selectUpdate();
+          btn.classList.remove('hvr-ripple-out-push');
         } else {
           btn.classList.remove('hvr-ripple-out-push_gray');
         }
-      }, 1500);
+
+        countGirl++;
+        girlUpdate(countGirl);
+      }, 1000);
     };
 
     buttonKiss.addEventListener("click", e => checkLastGirl() ? btnPush(e) : openModal());
